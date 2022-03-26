@@ -1,0 +1,9 @@
+﻿  LinkedList.c
+C:\Users\迷茫的剑客\source\repos\LinkedList\LinkedList\LinkedList.c(4,20): error C2143: 语法错误: 缺少“)”(在“*”的前面)
+C:\Users\迷茫的剑客\source\repos\LinkedList\LinkedList\LinkedList.c(4,20): error C2143: 语法错误: 缺少“{”(在“*”的前面)
+C:\Users\迷茫的剑客\source\repos\LinkedList\LinkedList\LinkedList.c(4,31): error C2370: “LIST”: 重定义；不同的存储类
+C:\Users\迷茫的剑客\source\repos\LinkedList\LinkedList\LinkedList.c(3): message : 参见“LIST”的声明
+C:\Users\迷茫的剑客\source\repos\LinkedList\LinkedList\LinkedList.c(4,36): error C2146: 语法错误: 缺少“;”(在标识符“x”的前面)
+C:\Users\迷茫的剑客\source\repos\LinkedList\LinkedList\LinkedList.c(4,37): error C2059: 语法错误:“)”
+C:\Users\迷茫的剑客\source\repos\LinkedList\LinkedList\LinkedList.c(5,1): error C2054: 在“x”之后应输入“(”
+C:\Users\迷茫的剑客\source\repos\LinkedList\LinkedList\LinkedList.c(31,10): warning C4013: “ListData”未定义；假设外部返回 int

@@ -13,4 +13,5 @@
 #include<cctype>
 #include<functional>
 #include<list>
+#include<cstdlib>
 using namespace std;

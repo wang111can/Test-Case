@@ -1,4 +1,5 @@
 ﻿  winer.cpp
-C:\Users\迷茫的剑客\source\repos\Project1\Project1\winer.cpp(109,12): warning C4244: “参数”: 从“time_t”转换到“unsigned int”，可能丢失数据
-C:\Users\迷茫的剑客\source\repos\Project1\Project1\winer.cpp(174,12): warning C4244: “参数”: 从“time_t”转换到“unsigned int”，可能丢失数据
-  Project1.vcxproj -> C:\Users\迷茫的剑客\source\repos\Project1\x64\Debug\Project1.exe
+C:\Users\迷茫的剑客\source\Test-Case\repos\Project1\Project1\winer.cpp(109,12): warning C4244: “参数”: 从“time_t”转换到“unsigned int”，可能丢失数据
+C:\Users\迷茫的剑客\source\Test-Case\repos\Project1\Project1\winer.cpp(174,12): warning C4244: “参数”: 从“time_t”转换到“unsigned int”，可能丢失数据
+C:\Users\迷茫的剑客\source\Test-Case\repos\Project1\Project1\winer.cpp(359): warning C4715: “My_memmove”: 不是所有的控件路径都返回值
+  Project1.vcxproj -> C:\Users\迷茫的剑客\source\Test-Case\repos\Project1\x64\Debug\Project1.exe

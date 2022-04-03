@@ -305,13 +305,172 @@ void test5()
 
 
 }
-typedef int typname;
-int main()
+
+void* My_mamcpy(void* x, const void* y, int n)
+{
+	if (!x || !y)
+		return NULL;
+
+	void* res = x;
+	char* xx = (char*)x;
+	char* yy = (char*)y;
+
+	while (n--){
+
+		*xx = *yy;
+		xx++; yy++;
+	}
+
+	return res;
+}
+
+
+void* My_memmove(void* x, const void* y, int n)
+{
+	if (!x || !y)
+		return NULL;
+	if (x < y){
+
+		void* res = x;
+		char* xx = (char*)x;
+		char* yy = (char*)y;
+
+		while (n--){
+
+			*xx = *yy;
+			xx++; yy++;
+		}
+
+		return res;
+		
+	}
+	else if (x >y){
+
+		void* res = x;
+		
+		while (n--){
+
+		*((char*)x + n )= *((char*)y+n);
+						
+		}
+
+		return res;
+	}
+}
+
+
+
+
+	/*int arr[10] = { 0 };
+	int arr1[10] = { 1,2,3,4,5,6,7,8,9,10 };
+	My_mamcpy(arr, arr1, sizeof(arr1));
+	My_memmove(arr+2, arr, 20);
+	for (auto i : arr)
+		cout << i << ' ';*/
+
+
+int My_atoi(const char *x)
+{
+	int flag = 0;
+	if (*x == '-')
+	{
+		flag = 1;
+		x++;
+	}int res = 0;
+	
+	while (*x && *x >= '0' && *x <= '9')
+	{
+		int tmp = *x++-'0';
+		if (flag)
+			tmp = -tmp;
+		res = res * 10 +tmp;
+	
+	}
+
+	return res;
+
+
+}
+
+char* My_strncat(char* x, char* y, int n)
 {
 
-	
+	if (x == NULL || y == NULL)
+		return NULL;
+	char* res = x;
+
+	while (*x)
+	{
+		x++;
+	}
+	while (n--)
+	{
+		*x++=*y++;
+		
+	}
+	*++x = '\0';
+	return res;
+
+
+
+
+
+}
+char* My_strncpy(char* x, char* y, int n)
+{
+	if (x == NULL || y == NULL)
+		return NULL;
+	char* res = x;
+	while (n--)
+	{
+		*x++ = *y++;
+
+	}
+	*x = '\0';
+	return res;
+}
+
+
+
+int main()
+{
+	const int sz = 100010;
+	int arr[] = { 1,1,2,2,3,4,4,5,5,6,7,7,8,8 };
+	int prev = 0;
+	int cur = 0;
+	int count = 0;
+	int num = 2;
+	while (1)
+	{
+		
+		if (arr[prev] == arr[cur])
+		{
+			count++;
+			cur++;
+		}
+		 if (arr[prev] != arr[cur]&&count==2)
+		{
+			prev = cur;
+			count = 0;
+
+		}
+		if (arr[prev] != arr[cur] && count != 2)
+		{
+			cout  << arr[prev] << " ";
+			prev = cur;
+			
+			count = 0;
+			num--;
+			if (!num)
+				break;
+
+		}
+
+
+	}
 	
 
+}
 
 	/*pair<set<int>::iterator, set<int>::iterator> ptr = arr.equal_range(3);
 	cout << *ptr.first<<*ptr.second;
@@ -343,5 +502,3 @@ int main()
 
 
 
-	return 0;
-}
